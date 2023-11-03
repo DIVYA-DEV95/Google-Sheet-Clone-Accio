@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Lobster&family=Lora&family=Montserrat&family=Orbitron&family=Pacifico&family=Raleway&family=Roboto&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+.container {
+    height: 100vh;
+    /* border: 1px solid red; */
+}
+
+.title-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    background-color: #107c41;
+    color: white;
+    font-size: 1.2rem;
+    /* border: 1px solid red; */
+}
+
+.menu-bar {
+    display: flex;
+    align-items: stretch;
+    height: 5%;
+    background-color: #107c41;
+    color: white;
+    /* border: 1px solid red; */
+}
+
+.menu-item {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.menu-item:hover {
+    cursor: pointer;
+    background-color: #0c5e31;
+}
+
+.menu-item-selected {
+    background-color: white;
+    color: #107c41;
+}
+
+.menu-item-selected:hover {
+    background-color: white;
+    cursor: default;
+}
+
+.menu-icon-bar {
+    display: flex;
+    align-items: center;
+    height: 5%;
+    background-color: #F2F1F2;
+    /* border: 1px solid red; */
+}
+
+.menu-icon {
+    padding: 6px 7px;
+    font-size: 21px;
+}
+
+.menu-icon:hover {
+    background-color: rgb(235, 233, 233);
+    cursor: pointer;
+}
+
+.font-family-selector #lobster {
+    font-family: 'Lobster', cursive;
+}
+
+.font-family-selector #arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.font-family-selector #lora {
+    font-family: 'Lora', serif;
+}
+
+.font-family-selector #caveat {
+    font-family: 'Caveat', cursive;
+}
+
+.font-family-selector #raleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+.font-family-selector #orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.font-family-selector #montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font-family-selector #pacifico {
+    font-family: 'Pacifico', cursive;
+}
+
+.font-family-selector #roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.font-family-selector, .font-size-selector {
+    padding: 4px;
+    margin: 0px 8px;
+}
+
+.font-family-selector, .font-size-selector option {
+    font-size: 1.05rem;
+}
+
+.font-family-selector {
+    font-family: "arial";
+}
+
+.selected {
+    background-color: lightgray;
+}
+
+.selected:hover {
+    background-color: lightgray;
+}
+
+.color-picker {
+    position: absolute;
+    width: 25px;
+    height: 12px;
+    border: none;
+    padding: 0;
+    top: 22px;
+    right: 7px;
+}
+
+.icon-color-fill, .icon-color-text {
+    position: relative;
+}
+
+/* formula bar-------------------------------- */
+
+.formula-bar {
+    height: 5%;
+    display: flex;
+    align-items: center;
+    padding: 0px 0.7rem;
+    background-color: #F2F1F2;
+    /* border: 1px solid red; */
+}
+
+.formula-editor {
+    height: 70%;
+    border: 1px solid lightgray;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.7rem;
+}
+
+.selected-cell {
+    width: 120px;
+}
+
+.function-sign {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+
+.formula-input {
+    width: calc(100vw - 160px);
+    outline-color: #107c41;
+    /*sets outline color when that div is selected */
+}
+
+/* data container----------------------------- */
+
+.data-container {
+    height: 76%;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+}
+
+.select-all {
+    border: 2px solid lightgrey;
+    width: 30px;
+    height: 30px;
+}
+
+.column-name-container {
+    width: calc(100vw - 30px);
+    height: 30px;
+    border: 2px solid lightgrey;
+    display: flex;
+    overflow: hidden;
+}
+
+.column-name {
+    min-width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px solid lightgray
+}
+
+.column-name:hover {
+    cursor: default;
+}
+
+.row-name-container {
+    border: 2px solid lightgrey;
+    height: calc(100% - 30px);
+    width: 30px;
+    overflow: hidden;
+}
+
+.row-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-bottom: 2px solid lightgray;
+}
+
+.row-name:hover {
+    cursor: default;
+}
+
+.input-cell-container {
+    border: 2px solid lightgrey;
+    height: calc(100% - 30px);
+    width: calc(100vw - 30px);
+    overflow: scroll;
+}
+
+.cell-row {
+    display: flex;
+}
+
+.input-cell {
+    min-height: 30px;
+    min-width: 120px;
+    border-right: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+    outline-color: #107c41;
+    font-size: 14px;
+    font-family: "Arial";
+}
+
+.input-cell.selected {
+    border: 2px solid #107c41;
+    background-color: white;
+}
+
+/* cell selection */
+
+.input-cell.top-cell-selected {
+    border-top: none;
+}
+
+.input-cell.bottom-cell-selected {
+    border-bottom: 2px solid lightgray;
+}
+
+.input-cell.left-cell-selected {
+    border-left: none;
+}
+
+.input-cell.right-cell-selected {
+    border-right: 2px solid lightgray;
+}
+
+/* sheet bar------------------------------------ */
+
+.sheet-bar {
+    /* border: 1px solid red; */
+    background-color: #F2F1F2;
+    height: 4%;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+}
+
+.sheet-bar-icon {
+    margin: 0px 5px;
+    font-size: 24px;
+}
+
+.sheet-bar-icon:hover {
+    background-color: rgb(235, 233, 233);
+    cursor: pointer;
+}
+
+.sheet-name {
+    margin: 0px 15px;
+    padding: 0px 10px;
+    border-bottom: 4px solid #107c41;
+    font-weight: 550;
+    cursor: default;
+}
+
+.sheet-bar-plus:hover {
+    transform: scale(1.1);
+}
+
+.icon-add {
+    color: #107c41
+}
+
+.sheet-tab-container {
+    display: flex;
+}
+
+.sheet-tab {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-right: 1px solid lightgray;
+}
+
+.sheet-tab.selected {
+    border-bottom: 4px solid#107c41;
+}
+
+.sheet-tab:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.sheet-tab.selected:hover {
+    cursor: default;
+    background-color: #fff;
+}
